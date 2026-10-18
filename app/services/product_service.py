@@ -67,13 +67,12 @@ class ProductService:
     def update(
         self,
         id: int,
-        product: ProductUpdate,
+        product_in: ProductUpdate,
     ) -> Product:
         """Update an active product."""
         product = self.get_by_id(id)
 
-        update_product = product.model_dump(exclude_unset=True)
-
+        update_product = product_in.model_dump(exclude_unset=True)
         for key, value in update_product.items():
             setattr(product, key, value)
 
