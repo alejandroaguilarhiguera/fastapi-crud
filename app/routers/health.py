@@ -2,17 +2,10 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import text
 from sqlalchemy.orm import Session
 
-from app.config.database import SessionLocal
+from app.config.database import SessionLocal, get_db
 
 router = APIRouter(tags=["Health"])
 
-
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
 
 
 @router.get("/health")
