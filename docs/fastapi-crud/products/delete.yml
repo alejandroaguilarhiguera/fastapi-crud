@@ -5,7 +5,7 @@ info:
 
 http:
   method: DELETE
-  url: "{{server}}/products/2"
+  url: "{{server}}/{{prefix}}/2"
   auth: inherit
 
 settings:

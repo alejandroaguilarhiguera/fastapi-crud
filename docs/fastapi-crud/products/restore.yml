@@ -5,7 +5,7 @@ info:
 
 http:
   method: PUT
-  url: "{{server}}/products/2/restore"
+  url: "{{server}}/{{prefix}}/2/restore"
   auth: inherit
 
 settings:

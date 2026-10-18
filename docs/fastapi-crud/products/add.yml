@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{server}}/products"
+  url: "{{server}}/{{prefix}}"
   body:
     type: json
     data: |-

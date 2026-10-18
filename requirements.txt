@@ -6,3 +6,8 @@ alembic
 psycopg[binary]
 python-dotenv
 dotenv
+pytest
+httpx
+sqlmodel
+faker
+jsonschema

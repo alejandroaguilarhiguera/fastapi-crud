@@ -5,7 +5,7 @@ info:
 
 http:
   method: PATCH
-  url: "{{server}}/products/1"
+  url: "{{server}}/{{prefix}}/1"
   body:
     type: json
     data: |-
