@@ -1,0 +1,62 @@
+info:
+  name: delete
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{server}}/products/2"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 404 not found
+    request:
+      url: "{{server}}/products/2"
+      method: DELETE
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: date
+          value: Sun, 18 Oct 2026 02:19:29 GMT
+        - name: server
+          value: uvicorn
+        - name: content-length
+          value: "30"
+        - name: content-type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "message": "Product not found"
+          }
+  - name: 200 success
+    request:
+      url: "{{server}}/products/2"
+      method: DELETE
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: date
+          value: Sun, 18 Oct 2026 02:23:47 GMT
+        - name: server
+          value: uvicorn
+        - name: content-length
+          value: "29"
+        - name: content-type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "message": "Product deleted"
+          }
