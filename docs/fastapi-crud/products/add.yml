@@ -5,10 +5,10 @@ info:
 
 http:
   method: POST
-  url: "{{server}}/{{prefix}}"
+  url: "{{server}}/{{prefix}}/"
   body:
     type: json
-    data: |-
+    data: |
       {
         "name":"{{$randomProductName}}",
         "price":"{{$randomPrice}}",

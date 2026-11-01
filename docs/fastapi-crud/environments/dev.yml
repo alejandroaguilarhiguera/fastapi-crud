@@ -1,0 +1,5 @@
+name: dev
+variables:
+  - name: server
+    value: http://localhost/api/product_module
+    description: ""
