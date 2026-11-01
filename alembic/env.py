@@ -2,7 +2,6 @@ import os
 
 from dotenv import load_dotenv
 from app.config.database import Base
-from app import models
 
 load_dotenv()
 
