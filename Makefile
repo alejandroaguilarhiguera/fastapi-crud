@@ -32,8 +32,11 @@ seed:
 	.venv/bin/python -m scripts.seed_products
 
 # Levantar FastAPI con recarga automática
-run:
+dev:
 	.venv/bin/uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+
+run:
+	.venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000
 
 # Levantar PostgreSQL con Docker Compose
 up:
